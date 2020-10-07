@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
 
-* {
-    box-sizing: border-box;
-  }
+
   header,
 section {
   overflow-x: hidden;
@@ -12,7 +10,7 @@ section {
 header {
     height: 100vh;
     min-height: 500px;
-    background:black;
+    background:linear-gradient(blue,black);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,8 +22,7 @@ header {
     background-repeat: no-repeat;
   }
   section{
-    min-height: 500px;
-    background:linear-gradient(black,blue,black);
+    background:black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
