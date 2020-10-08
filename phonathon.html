@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container h-100" id="header-inner">
             <div class="row h-100 align-items-center">
@@ -36,10 +35,9 @@
         </div>
     </header>
     <section>
-        <div class="container h-100" class="section-inner">
+        <div class="container h-100 section-inner">
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-sm-6 text-left text-white offset-sm-1">
-                    <br><br><br>
                     <h1 class="font-weight-bold gsap1">Phonathon</h1>
                     <br><br>
                     <p class="lead gsap1">With an objective to involve students in the institute development, Phonathon
@@ -50,9 +48,8 @@
                         benefits the institute. </p>
                     <!--this text should be less-->
                 </div>
-                <div class="col-12 col-sm-5">
-                    <br><br><br>
-                    <img class="gsap1" src="phonathon/xyz1.jpg" height="450rem">
+                <div class="col-12 col-sm-5  text-center">
+                    <img class="gsap1" src="phonathon/xyz1.jpg" width="60%" height="auto">
                     <!--space for an image or a video-->
                 </div>
             </div>
@@ -74,7 +71,6 @@
     <section>
         <div class="container h-100" class="section-inner">
             <div class="row align-items-center">
-                <br><br><br><br><br><br>
                 <div class="col-12 text-center text-white">
                     <h1 class="font-weight-bold gsap2">Phonathon 4.0</h1>
                     <br>
@@ -130,35 +126,101 @@
         });
     </script>
     <section>
-        <div class="container" class="section-inner">
+        <div>
             <div class="row align-items-center text-center">
-
                 <div class="col-12 text-center text-white justify-content-center">
                     <h1 class="font-weigh-bold">Testimonials</h1>
-                    <br><br>
-                    <img src="phonathon/2.0/2.jpg" height="250rem" id="testimonial_images">
-                    <img src="phonathon/2.0/3.jpg" height="250rem" id="testimonial-images1">
-                    <br><br>
-                    <img src="phonathon/2.0/4.jpg" height="250rem" id="testimonial2_images">
-                    <img src="phonathon/2.0/5.jpg" height="250rem" id="testimonial2-images1">
-                    <br><br>
-                    <img src="phonathon/2.0/6.jpg" height="250rem" id="testimonial3_images">
-                    <img src="phonathon/2.0/7.jpg" height="250rem" id="testimonial3-images1">
-                    <br><br>
-                    <img src="phonathon/2.0/8.jpg" height="250rem" id="testimonial4_images">
-                    <img src="phonathon/2.0/9.jpg" height="250rem" id="testimonial4-images1">
                 </div>
             </div>
-
+            <br><br>
+            <div class="row  align-items-center">
+                <div class="col-12 col-sm-4 offset-sm-1">
+                    <img src="phonathon/2.0/6.jpg" width="100%" height="auto" class="testimonial3_images">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="card testimonialcaptionsleft testimonial3_images">
+                        <h5 class="card-title mr-auto">Anmol Thakur</h5>
+                        <div class="card-body mr-auto">
+                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row  align-items-center">
+                <div class="col-12 col-sm-6 offset-sm-1">
+                    <div class="card testimonialcaptionsright testimonial2-images1">
+                        <h5 class="card-title ml-auto">Md Zaman Khan</h5>
+                        <div class="card-body ml-auto">
+                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <img src="phonathon/2.0/5.jpg" width="100%" height="auto" class="testimonial2-images1">
+                </div>
+            </div>
+            <br>
+            <div class="row  align-items-center">
+                <div class="col-12 col-sm-4 offset-sm-1">
+                    <img src="phonathon/2.0/2.jpg" width="100%" height="auto" class="testimonial_images">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="card testimonialcaptionsleft testimonial_images">
+                        <h5 class="card-title mr-auto">Aman Verma</h5>
+                        <div class="card-body mr-auto">
+                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row  align-items-center">
+                <div class="col-12 col-sm-6 offset-sm-1">
+                    <div class="card testimonialcaptionsright testimonial3-images1">
+                        <h5 class="card-title ml-auto">Neerav Jain</h5>
+                        <div class="card-body ml-auto">
+                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <img src="phonathon/2.0/8.jpg" width="100%" height="auto" class="testimonial3-images1">
+                </div>
+            </div>
         </div>
     </section>
     <!--Scroll animations for testimonials section-->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from("#testimonial_images", {
+        gsap.from(".testimonial_images", {
             scrollTrigger: {
-                trigger: "#testimonial_images",
+                trigger: ".testimonial_images",
+                start: "top center",
+                toggleActions: "play play play play"
+            },
+            opacity: 0,
+            duration: 2,
+            x: -200,
+            stagger: 0.4
+        });
+
+        gsap.from(".testimonial2-images1", {
+            scrollTrigger: {
+                trigger: ".testimonial2-images1",
+                start: "top center",
+                toggleActions: "play play play play"
+            },
+            opacity: 0,
+            duration: 2,
+            x: 1200,
+            stagger: 0.4
+        });
+
+        gsap.from(".testimonial3_images", {
+            scrollTrigger: {
+                trigger: ".testimonial3_images",
                 start: "top center",
                 toggleActions: "play play play play"
             },
@@ -168,9 +230,9 @@
             stagger: 0.1
         });
 
-        gsap.from("#testimonial-images1", {
+        gsap.from(".testimonial3-images1", {
             scrollTrigger: {
-                trigger: "#testimonial-images1",
+                trigger: ".testimonial3-images1",
                 start: "top center",
                 toggleActions: "play play play play"
             },
@@ -180,78 +242,6 @@
             stagger: 0.1
         });
 
-        gsap.from("#testimonial2_images", {
-            scrollTrigger: {
-                trigger: "#testimonial2_images",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: -200,
-            stagger: 0.1
-        });
-
-        gsap.from("#testimonial2-images1", {
-            scrollTrigger: {
-                trigger: "#testimonial2-images1",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: 1200,
-            stagger: 0.1
-        });
-
-        gsap.from("#testimonial3_images", {
-            scrollTrigger: {
-                trigger: "#testimonial3_images",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: -200,
-            stagger: 0.1
-        });
-
-        gsap.from("#testimonial3-images1", {
-            scrollTrigger: {
-                trigger: "#testimonial3-images1",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: 1200,
-            stagger: 0.1
-        });
-        gsap.from("#testimonial4_images", {
-            scrollTrigger: {
-                trigger: "#testimonial4_images",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: -200,
-            stagger: 0.1
-        });
-
-
-        gsap.from("#testimonial4-images1", {
-            scrollTrigger: {
-                trigger: "#testimonial4-images1",
-                start: "top center",
-                toggleActions: "play play play play"
-            },
-            opacity: 0,
-            duration: 2,
-            x: 1200,
-            stagger: 0.1
-        });
-        
     </script>
 
     <section id='footer'>
@@ -266,20 +256,20 @@
                 <div class='col-6 footer-top-right'>
                     <h5>Students' Alumni Cell, IIT Kharagpur</h5>
                     <p>Office of Alumni Affairs & International Relations,<br>
-                         Indian Institute of Technology, Kharagpur<br>
-                         Pin-721302, West Bengal, India<br><br>
-                      <em>Ph: 03222-281860</em> <br>
-                      <em>Email: aao@hijli.iitkgp.ernet.in</em>
-                  </p>
-                  <hr>
+                        Indian Institute of Technology, Kharagpur<br>
+                        Pin-721302, West Bengal, India<br><br>
+                        <em>Ph: 03222-281860</em> <br>
+                        <em>Email: aao@hijli.iitkgp.ernet.in</em>
+                    </p>
+                    <hr>
                 </div>
             </div>
             <div class='row'>
                 <div class='col-2 '>
-                    <span class='bar'>|</span>  
+                    <span class='bar'>|</span>
                 </div>
                 <div class=col-2>
-                    <i class="icon fab fa-facebook"></i>	
+                    <i class="icon fab fa-facebook"></i>
                 </div>
                 <div class='col-2'>
                     <i class="icon fab fa-instagram"></i>
@@ -293,14 +283,13 @@
                 <div class='col-2'>
                     <i class="icon fab fa-linkedin"></i>
                 </div>
-                
+
             </div>
-        </div> 
+        </div>
     </section>
     <div id='copyright'>
         <p>&copy; 2018 Students' Alumni Cell</p>
-    </div> 	
-
+    </div>
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
