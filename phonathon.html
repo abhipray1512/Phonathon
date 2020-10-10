@@ -24,21 +24,70 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Events</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Initiatives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Sponsors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>The Team</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
     <header>
         <div class="container h-100" id="header-inner">
             <div class="row h-100 align-items-center">
-                <div class="col-12 col-sm-8 offset-sm-4 text-center text-white">
+                <div class="col-12 col-sm-8 offset-sm-4 text-center text-white gsapx">
                     <h1 class="font-weight-bold">Phonathon</h1>
                     <p class="lead">Some one liner</p>
                 </div>
             </div>
         </div>
     </header>
-    <section>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".gsapx", {
+            scrollTrigger: {
+                trigger: ".gsapx",
+                start: "top center",
+                toggleActions: "play play play play"
+            },
+            opacity: 0,
+            duration: 2
+        });
+    </script>
+    <section id="sec1">
         <div class="container h-100 section-inner">
             <div class="row h-100 align-items-center">
-                <div class="col-12 col-sm-6 text-left text-white offset-sm-1">
-                    <h1 class="font-weight-bold gsap1">Phonathon</h1>
+                <div class="col-12 col-sm-6 text-left text-white offset-sm-1" id="padding">
+                    <h1 class="font-weight-bold gsap1"
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Phonathon</h1>
+                    <div class="progress gsap1">
+                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <br><br>
                     <p class="lead gsap1">With an objective to involve students in the institute development, Phonathon
                         is an
@@ -69,18 +118,28 @@
         });
     </script>
     <section>
-        <div class="container h-100" class="section-inner">
+        <div class="container section-inner">
             <div class="row align-items-center">
                 <div class="col-12 text-center text-white">
-                    <h1 class="font-weight-bold gsap2">Phonathon 4.0</h1>
+                    <h1 class="font-weight-bold gsap2"
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Phonathon 4.0
+                    </h1>
+                    <div class="progress gsap2">
+                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <br>
-                    <img src="phonathon/phonathon42.jpg" class="img-fluid gsap2" height="auto" width="60%"
-                        style="max-width: 100%;">
-                    <br>
-                    <br>
-                    <br>
-                    <img src="phonathon/phonathon41.jpg" class="img-fluid gsap2" height="auto" width="60%"
-                        style="max-width: 100%;">
+                </div>
+            </div>
+            <div id="gallery_row" class="row align-items-center gsap2">
+                <div class="col-12 text-center col-sm-3">
+                    <img class="img-fluid phonathon4_images" src="phonathon/phonathon42.jpg" height="auto">
+                </div>
+                <div class="col-12 text-center col-sm-6">
+                    <img class="img-fluid phonathon4_images" src="phonathon/phonathon41.jpg" height="auto">
+                </div>
+                <div class="col-12 text-center col-sm-3">
+                    <img class="img-fluid phonathon4_images" src="phonathon/phonathon42.jpg" height="auto">
                 </div>
             </div>
         </div>
@@ -100,13 +159,19 @@
 
     </script>
     <section>
-        <div class="container h-100" class="section-inner">
+        <div class="container h-100 section-inner">
             <div class="row align-items-center">
                 <br><br><br><br><br><br>
                 <div class="col-12 text-center text-white">
-                    <h1 class="font-weight-bold gsap3">Phonathon 3.0</h1>
+                    <h1 class="font-weight-bold gsap3"
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Phonathon 3.0
+                    </h1>
+                    <div class="progress gsap3">
+                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                     <br>
-                    <img src="phonathon/phonathon31.jpg" class="img-fluid gsap3" height="auto" width="60%"
+                    <img src="phonathon/phonathon31.jpg" class="img-fluid gsap3" height="auto" width="70%"
                         style="max-width: 100%;">
                 </div>
             </div>
@@ -126,67 +191,73 @@
         });
     </script>
     <section>
-        <div>
-            <div class="row align-items-center text-center">
-                <div class="col-12 text-center text-white justify-content-center">
-                    <h1 class="font-weigh-bold">Testimonials</h1>
-                </div>
+        <div class="row align-items-center" style="margin-bottom: 5%;">
+            <div class="col-12 col-sm-4 offset-sm-1">
+                <img src="phonathon/2.0/6.jpg" width="100%" height="auto" class="testimonial3_images">
             </div>
-            <br><br>
-            <div class="row  align-items-center">
-                <div class="col-12 col-sm-4 offset-sm-1">
-                    <img src="phonathon/2.0/6.jpg" width="100%" height="auto" class="testimonial3_images">
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="card testimonialcaptionsleft testimonial3_images">
-                        <h5 class="card-title mr-auto">Anmol Thakur</h5>
-                        <div class="card-body mr-auto">
-                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
-                        </div>
+            <div class="col-12 col-sm-6 text-white">
+                <h1 class="font-weight-bold testimonial3_images testimonialheadingleft">Anmol Thakkar</h1>
+                <h2 class="font-weight-bold testimonial3_images testimonialheadingleft">batch of '20</h2>
+                <div class="card c1 testimonialcaptionsleft testimonial3_images">
+                    <div class="card-body mr-auto">
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. </p>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row  align-items-center">
-                <div class="col-12 col-sm-6 offset-sm-1">
-                    <div class="card testimonialcaptionsright testimonial2-images1">
-                        <h5 class="card-title ml-auto">Md Zaman Khan</h5>
-                        <div class="card-body ml-auto">
-                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <img src="phonathon/2.0/5.jpg" width="100%" height="auto" class="testimonial2-images1">
-                </div>
-            </div>
-            <br>
-            <div class="row  align-items-center">
-                <div class="col-12 col-sm-4 offset-sm-1">
-                    <img src="phonathon/2.0/2.jpg" width="100%" height="auto" class="testimonial_images">
-                </div>
-                <div class="col-12 col-sm-6">
-                    <div class="card testimonialcaptionsleft testimonial_images">
-                        <h5 class="card-title mr-auto">Aman Verma</h5>
-                        <div class="card-body mr-auto">
-                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
-                        </div>
+        </div>
+        <br>
+        <div class="row my-1 align-items-center" style="margin-top: 5%; margin-bottom: 5%;">
+            <div class="col-12 col-sm-6 offset-sm-1 text-white">
+                <h1 class="font-weight-bold testimonial2-images1 testimonialheadingright">Md Zaman Khan</h1>
+                <h2 class="font-weight-bold testimonial2-images1 testimonialheadingright">batch of '20</h2>
+                <div class="card c2 testimonialcaptionsright testimonial2-images1">
+                    <div class="card-body ml-auto">
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.</p>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row  align-items-center">
-                <div class="col-12 col-sm-6 offset-sm-1">
-                    <div class="card testimonialcaptionsright testimonial3-images1">
-                        <h5 class="card-title ml-auto">Neerav Jain</h5>
-                        <div class="card-body ml-auto">
-                            <p class="card-text">---------------------- SOME CAPTION ---------------------------</p>
-                        </div>
+            <div class="col-12 col-sm-4">
+                <img src="phonathon/2.0/5.jpg" width="100%" height="auto" class="testimonial2-images1">
+            </div>
+        </div>
+        <div class="row  align-items-center" style="margin-top: 5%; margin-bottom: 5%;">
+            <div class="col-12 col-sm-4 offset-sm-1">
+                <img src="phonathon/2.0/2.jpg" width="100%" height="auto" class="testimonial_images">
+            </div>
+            <div class="col-12 col-sm-6 text-white">
+                <h1 class="font-weight-bold testimonial_images testimonialheadingleft">Aman Verma</h1>
+                <h2 class="font-weight-bold testimonial_images testimonialheadingleft">batch of '20</h2>
+                <div class="card c1 testimonialcaptionsleft testimonial_images">
+                    <div class="card-body mr-auto">
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. </p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-4">
-                    <img src="phonathon/2.0/8.jpg" width="100%" height="auto" class="testimonial3-images1">
+            </div>
+        </div>
+        <div class="row  align-items-center" style="margin-top: 5%;">
+            <div class="col-12 col-sm-6 offset-sm-1 text-white">
+                <h1 class="font-weight-bold testimonial3-images1 testimonialheadingright">Neerav Jain</h1>
+                <h2 class="font-weight-bold testimonial3-images1 testimonialheadingright">batch of '20</h2>
+                <div class="card c2 testimonialcaptionsright testimonial3-images1">
+                    <div class="card-body ml-auto">
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. </p>
+                    </div>
                 </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <img src="phonathon/2.0/8.jpg" width="100%" height="auto" class="testimonial3-images1">
             </div>
         </div>
     </section>
@@ -201,7 +272,7 @@
                 toggleActions: "play play play play"
             },
             opacity: 0,
-            duration: 2,
+            duration: 1.5,
             x: -200,
             stagger: 0.4
         });
@@ -213,7 +284,7 @@
                 toggleActions: "play play play play"
             },
             opacity: 0,
-            duration: 2,
+            duration: 1.5,
             x: 1200,
             stagger: 0.4
         });
@@ -225,7 +296,7 @@
                 toggleActions: "play play play play"
             },
             opacity: 0,
-            duration: 2,
+            duration: 1.5,
             x: -200,
             stagger: 0.1
         });
@@ -237,7 +308,7 @@
                 toggleActions: "play play play play"
             },
             opacity: 0,
-            duration: 2,
+            duration: 1.5,
             x: 1200,
             stagger: 0.1
         });
@@ -302,7 +373,47 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-
+    <script>
+        // ---------Responsive-navbar-active-animation-----------
+        function test() {
+            var tabsNewAnim = $('#navbarSupportedContent');
+            var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+            var activeItemNewAnim = tabsNewAnim.find('.active');
+            var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+            var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+            var itemPosNewAnimTop = activeItemNewAnim.position();
+            var itemPosNewAnimLeft = activeItemNewAnim.position();
+            $(".hori-selector").css({
+                "top": itemPosNewAnimTop.top + "px",
+                "left": itemPosNewAnimLeft.left + "px",
+                "height": activeWidthNewAnimHeight + "px",
+                "width": activeWidthNewAnimWidth + "px"
+            });
+            $("#navbarSupportedContent").on("click", "li", function (e) {
+                $('#navbarSupportedContent ul li').removeClass("active");
+                $(this).addClass('active');
+                var activeWidthNewAnimHeight = $(this).innerHeight();
+                var activeWidthNewAnimWidth = $(this).innerWidth();
+                var itemPosNewAnimTop = $(this).position();
+                var itemPosNewAnimLeft = $(this).position();
+                $(".hori-selector").css({
+                    "top": itemPosNewAnimTop.top + "px",
+                    "left": itemPosNewAnimLeft.left + "px",
+                    "height": activeWidthNewAnimHeight + "px",
+                    "width": activeWidthNewAnimWidth + "px"
+                });
+            });
+        }
+        $(document).ready(function () {
+            setTimeout(function () { test(); });
+        });
+        $(window).on('resize', function () {
+            setTimeout(function () { test(); }, 500);
+        });
+        $(".navbar-toggler").click(function () {
+            setTimeout(function () { test(); });
+        });
+    </script>
 </body>
 
 </html>
