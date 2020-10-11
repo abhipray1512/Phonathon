@@ -277,5 +277,14 @@ header {
       color: white;
       z-index: 1;
     }
+    .smallscreenvisible{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 550px)
+  {
+    .bigscreenvisible{
+      display: none;
+    }
   }
   
